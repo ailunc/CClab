@@ -1,0 +1,55 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  
+  background-image: url('img/1.jpg') ;
+  background-size:cover;
+  background-repeat:no-repeat;
+    /* background-color: aquamarine; */
+  }
+  canvas {
+    display: block;
+    border-radius: 12%;
+    border-style: groove ;
+    border: width 20px;
+    
+  }
+
+#canvasContainer{
+  position: inherit;
+  display: flex;
+  justify-content: center;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-family: 'Bruno Ace', Times, serif;
+  font-weight: 1000;
+  background-size: cover;
+  text-shadow: 0 0 5px #8f7cb2, 0 0 5px #717bd7; 
+  border: medium solid rgb(112, 89, 180);
+  background-color: aliceblue;
+  border-radius: 2%;
+  letter-spacing:8px;
+  text-indent: 6px;
+}
+
+p{
+  text-shadow: 2px,2px;
+  font-family:'Bruno Ace', Times, serif;
+  text-overflow: ellipsis;
+  color:black;
+  font-weight: 100;
+  background-color: rgb(191, 213, 233);
+  font-size:xx-large;
+  display: flex;
+  justify-content: center;
+  border: medium solid red;
+  border-width:0.1ch;
+  border-radius: 0%;
+}
+
