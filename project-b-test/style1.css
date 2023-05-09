@@ -4,7 +4,7 @@ html{
   }
   
   body{
-  background-image: url('asssets/saveoceans-pollution.gif') ;
+  background-image: url('asssets/background html1.png') ;
   background-size: cover;
   
   }
@@ -87,7 +87,7 @@ html{
   
   
   #refrences{
-  background-color: #a2e4f5;
+  background-color: #d5e2e6;
   color: rgb(29, 28, 28);
   font-size: 25px;
   width: 100%;
@@ -187,9 +187,9 @@ html{
   
   
   #refrences2{
-    background-color: #a2e4f5;
+    background-color: #d5e2e6;
     color: rgb(29, 28, 28);
-    font-size: 25px;
+    font-size: 35px;
     width: 100%;
     height: 420px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -229,9 +229,9 @@ html{
   
   
   #refrences3{
-    background-color: #a2e4f5;
+    background-color: #d5e2e6;
     color: rgb(29, 28, 28);
-    font-size: 25px;
+    font-size: 30px;
     width: 100%;
     height: 480px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

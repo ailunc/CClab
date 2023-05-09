@@ -48,6 +48,14 @@ class Particle {
     this.vel.add(this.acc);
     this.pos.add(this.vel);
   }
+  edges(){
+    if(this.pos.x < -200 || this.pos.x > 200 || this.pos.y < -190 || this.pos.y > 190){
+      return true
+    }
+    else{
+      return false;
+    }
+  }
   show() {
     push();
     noStroke();
@@ -84,8 +92,8 @@ function preload() {
 
 function setup() {
   getAudioContext().suspend();
-  let canvas = createCanvas(850, 400);
-  canvas.parent("canvasContainer")
+  let canvas = createCanvas(780, 400);
+  canvas.parent("p5-canvas-container")
   // image(
   //   bg,
   //   0,
@@ -180,9 +188,14 @@ function draw() {
     translate(width / 2, height / 2);
     let p = new Particle();
     particles.push(p);
-    for (let i = 0; i < particles.length; i++) {
-      particles[i].update();
-      particles[i].show();
+    for (let i = particles.length -1; i >= 0; i--) {
+      if(!particles[i].edges()){
+        particles[i].update();
+        particles[i].show();
+      }
+      else{
+        particles.splice(i,1);
+      }
     }
     let wave = fft.waveform();
     for (let t = -1; t <= 1; t += 2) {

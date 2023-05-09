@@ -83,53 +83,22 @@ function preload() {
 }
 
 function setup() {
-  getAudioContext().suspend();
   let canvas = createCanvas(850, 400);
   canvas.parent("canvasContainer")
-  // image(
-  //   bg,
-  //   0,
-  //   0,
-  //   width + 5,
-  //   height,
-  //   0,
-  //   0,
-  //   bg.width + 5,
-  //   bg.height,
-  //   CONTAIN,
-  //   LEFT,
-  //   TOP
-  // );
-  push();
-  fill(233, 238, 244);
-  stroke(196, 201, 207);
-  rect(0, 0, 98, 233);
-  rect(0, 233, 98, 167);
-  fill(56, 57, 59);
-  stroke(56, 57, 59);
-  rect(0, 31, 64, 31);
-  rect(0, 98, 64, 31);
-  rect(0, 166, 64, 31);
-  rect(0, 268, 64, 31);
-  rect(0, 336, 64, 31);
-  pop();
-  push();
-  stroke(35, 52, 62);
-  for (let i = 1; i < 8; i++) {
-    if (i % 2 == 0) {
-      fill(51, 68, 78);
-      for (let j = 0; j < 8; j++) {
-        rect(98 + 84 * j, 400 - i * 57, 84, 57);
-      }
-    }
-    if (i % 2 == 1) {
-      fill(45, 62, 72);
-      for (let j = 0; j < 8; j++) {
-        rect(98 + 84 * j, 400 - i * 57, 84, 57);
-      }
-    }
-  }
-  pop();
+  image(
+    bg,
+    0,
+    0,
+    width + 5,
+    height,
+    0,
+    0,
+    bg.width + 5,
+    bg.height,
+    CONTAIN,
+    LEFT,
+    TOP
+  );
   for (let i = 0; i < 8; i++) {
     for (let j = 1; j < 8; j++) {
       rectangle.push(new rectangles(98 + 84 * i, 400 - 57 * j));
@@ -140,39 +109,21 @@ function setup() {
 }
 
 function draw() {
-  // console.log(mouseX, mouseY);
   if (player == 1) {
-    // image(
-    //   bg,
-    //   0,
-    //   0,
-    //   width + 3,
-    //   height,
-    //   0,
-    //   0,
-    //   bg.width + 3,
-    //   bg.height,
-    //   CONTAIN,
-    //   LEFT,
-    //   TOP
-    // );
-    push();
-    stroke(35, 52, 62);
-    for (let i = 1; i < 8; i++) {
-      if (i % 2 == 0) {
-        fill(51, 68, 78);
-        for (let j = 0; j < 8; j++) {
-          rect(98 + 84 * j, 400 - i * 57, 84, 57);
-        }
-      }
-      if (i % 2 == 1) {
-        fill(45, 62, 72);
-        for (let j = 0; j < 8; j++) {
-          rect(98 + 84 * j, 400 - i * 57, 84, 57);
-        }
-      }
-    }
-    pop();
+    image(
+      bg,
+      0,
+      0,
+      width + 3,
+      height,
+      0,
+      0,
+      bg.width + 3,
+      bg.height,
+      CONTAIN,
+      LEFT,
+      TOP
+    );
     push();
     noFill();
     stroke(255, 90);
@@ -197,7 +148,7 @@ function draw() {
       endShape();
     }
     pop();
-    timer += 0.74;
+    timer += 0.7;
     if (timer >= 780) {
       timer = 98;
       counter = [0, 0, 0, 0, 0, 0, 0, 0];
@@ -229,37 +180,20 @@ function draw() {
 }
 
 function mouseClicked() {
-  // image(
-  //   bg,
-  //   0,
-  //   0,
-  //   width + 3,
-  //   height,
-  //   0,
-  //   0,
-  //   bg.width + 3,
-  //   bg.height,
-  //   CONTAIN,
-  //   LEFT,
-  //   TOP
-  // );
-  push();
-  stroke(35, 52, 62);
-  for (let i = 1; i < 8; i++) {
-    if (i % 2 == 0) {
-      fill(51, 68, 78);
-      for (let j = 0; j < 8; j++) {
-        rect(98 + 84 * j, 400 - i * 57, 84, 57);
-      }
-    }
-    if (i % 2 == 1) {
-      fill(45, 62, 72);
-      for (let j = 0; j < 8; j++) {
-        rect(98 + 84 * j, 400 - i * 57, 84, 57);
-      }
-    }
-  }
-  pop();
+  image(
+    bg,
+    0,
+    0,
+    width + 3,
+    height,
+    0,
+    0,
+    bg.width + 3,
+    bg.height,
+    CONTAIN,
+    LEFT,
+    TOP
+  );
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 7; j++) {
       if (
@@ -291,7 +225,4 @@ function keyPressed() {
       player = 0;
     }
   }
-}
-function mousePressed() {
-  userStartAudio();
 }
